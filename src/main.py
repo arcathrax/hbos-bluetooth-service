@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
     # Start config watcher
     observer = Observer()
-    watcher = ConfigWatcher(agent, agnt_mngr, config_file_manager)
+    watcher = ConfigWatcher(agent, agnt_mngr, config_file_manager, adapter)
     observer.schedule(watcher, path=os.path.dirname(os.path.abspath(config_file_manager.config_file)) or ".", recursive=False)
     observer.start()
 

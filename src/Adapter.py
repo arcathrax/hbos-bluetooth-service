@@ -20,3 +20,14 @@ class Adapter:
                                self.config_file_manager.pairable)
         self.adapter_props.Set(self.ADAPTER_IFACE, 'PairableTimeout',
                                dbus.UInt32(self.config_file_manager.pairable_timeout))
+
+    def update_properties(self):
+        self.config_file_manager.load_config_values()
+        self.adapter_props.Set(self.ADAPTER_IFACE, 'Discoverable',
+                                 self.config_file_manager.discoverable)
+        self.adapter_props.Set(self.ADAPTER_IFACE, 'DiscoverableTimeout',
+                                 dbus.UInt32(self.config_file_manager.discoverable_timeout))
+        self.adapter_props.Set(self.ADAPTER_IFACE, 'Pairable',
+                                 self.config_file_manager.pairable)
+        self.adapter_props.Set(self.ADAPTER_IFACE, 'PairableTimeout',
+                                 dbus.UInt32(self.config_file_manager.pairable_timeout))
