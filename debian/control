@@ -1,0 +1,13 @@
+Source: hbos-bluetooth-service
+Section: python
+Priority: optional
+Maintainer: HiFiBerry <support@hifiberry.com>
+Build-Depends: debhelper (>= 13)
+Standards-Version: 4.5.0
+Homepage: <https://github.com/ivanpollak/hbos-bluetooth-service>
+
+Package: hbos-bluetooth-service
+Architecture: all
+Depends: python3, python3-gi, python3-dbus, python3-watchdog
+Description: HBOS Bluetooth Service
+ A simple bluetooth service for HBOS.
