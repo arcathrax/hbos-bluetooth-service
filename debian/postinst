@@ -1,8 +1,0 @@
-#!/bin/sh
-
-set -e
-
-if [ "$1" = "configure" ]; then
-	systemctl enable hbos-bluetooth-service.service
-	systemctl start hbos-bluetooth-service.service
-fi

@@ -1,8 +1,0 @@
-#!/usr/bin/make -f
-
-%:
-	dh $@
-
-override_dh_install:
-	dh_install
-	dh_install -p hbos-bluetooth-service debian/hbos-bluetooth-service.service /lib/systemd/system/
