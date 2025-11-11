@@ -19,7 +19,7 @@ setup(
     version=get_version(),
     description="HiFiBerry Bluetooth Service",
     long_description="HiFiBerry Bluetooth Service, that manages all the incomming Bluetooth connections. "
-                     "The settings can be adjusted via the web interface or a config file."
+                     "The settings can be adjusted via the web interface or a config file.",
     author="HiFiBerry",
     author_email="support@hifiberry.com",
     license="MIT",
