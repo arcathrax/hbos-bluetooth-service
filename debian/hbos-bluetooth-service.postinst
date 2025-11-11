@@ -1,0 +1,33 @@
+#!/bin/bash
+set -e
+
+case "$1" in
+    configure)
+        # Enable and start the config-server service
+        if command -v systemctl >/dev/null 2>&1; then
+            # Reload systemd daemon to recognize new service
+            systemctl daemon-reload
+            
+            # Enable the hbos-bluetooth service for automatic startup
+            systemctl enable hbos-bluetooth.service
+            
+            # Start the hbos-bluetooth service if not already running
+            if ! systemctl is-active --quiet hbos-bluetooth.service; then
+                systemctl start hbos-bluetooth.service
+            fi
+            
+            echo "HiFiBerry Bluetooth Service has been enabled and started."
+        fi
+        ;;
+    
+    abort-upgrade|abort-remove|abort-deconfigure)
+        ;;
+    
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+        ;;
+esac
+
+#DEBHELPER#
+

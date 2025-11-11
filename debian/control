@@ -1,0 +1,18 @@
+Source: hbos-bluetooth
+Section: python
+Priority: optional
+Maintainer: HiFiBerry <support@hifiberry.com>
+Build-Depends: debhelper-compat (= 13), 
+               dh-sequence-python3,
+               python3-all,
+               python3-setuptools,
+Standards-Version: 4.1.4
+Homepage: https://www.hifiberry.com/
+
+Package: hbos-bluetooth
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, systemd
+Description: HiFiBerry bluetooth configuration scripts
+  Manages how Bluetooth connections will work. Set the different options using
+  either the web interface of hbos or using the config file.
+  This should be a daemon but it can be run by the user.
