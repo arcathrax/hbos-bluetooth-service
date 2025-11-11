@@ -24,9 +24,7 @@ bus = dbus.SystemBus()
 mainloop = GLib.MainLoop()
 
 
-
-
-if __name__ == "__main__":
+def main():
     # Initialize agent and agent manager
     agent = Agent(bus, AGENT_PATH)
     agnt_mngr = dbus.Interface(bus.get_object(BUS_NAME, AGNT_MNGR_PATH), AGNT_MNGR_IFACE)
@@ -54,3 +52,7 @@ if __name__ == "__main__":
         observer.stop()
         observer.join()
         mainloop.quit()
+
+
+if __name__ == "__main__":
+    main()
