@@ -1,5 +1,5 @@
 import dbus
-from ConfigFileManager import ConfigFileManager
+from .ConfigFileManager import ConfigFileManager
 
 class Adapter:
     BUS_NAME = "org.bluez"

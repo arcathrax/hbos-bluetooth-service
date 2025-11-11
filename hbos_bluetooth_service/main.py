@@ -1,11 +1,11 @@
 import dbus
 import dbus.mainloop.glib
 from gi.repository import GLib
-from ConfigFileManager import ConfigFileManager
-from Agent import Agent
-from Adapter import Adapter
 from watchdog.observers import Observer
-from ConfigWatcher import ConfigWatcher
+from .Agent import Agent
+from .Adapter import Adapter
+from .ConfigFileManager import ConfigFileManager
+from .ConfigWatcher import ConfigWatcher
 import os
 
 BUS_NAME = "org.bluez"
